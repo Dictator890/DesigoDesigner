@@ -1,0 +1,59 @@
+.root {
+  top: 0;
+  z-index: 10;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: screenanim 0.8s;
+  overflow: hidden;
+  --image-size: 48px;
+}
+@keyframes screenanim {
+  from {
+    top: -100vh;
+    opacity: 0;
+  }
+  to {
+    top: 0vh;
+    opacity: 1;
+  }
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid !important;
+  grid-template-rows: 15vh 85vh;
+}
+.MenuBar {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+  flex-direction: row-reverse;
+}
+.MenuBar .button {
+  height: var(--image-size);
+  margin-right: 2%;
+  user-select: none;
+  cursor: pointer;
+}
+.mainContainer {
+  display: flex;
+  box-sizing: border-box;
+  padding: 2%;
+  justify-content: center;
+  align-items: center;
+}
+.codeTop {
+  height: 100%;
+  width: 40%;
+  text-align: center;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 10px;
+  overflow: hidden;
+}

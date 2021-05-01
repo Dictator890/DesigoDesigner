@@ -1,0 +1,63 @@
+.LogIn {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  width: 70vmin;
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+.FormContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: fit-content;
+  text-align: center;
+}
+.FormContainer input {
+  margin-top: 2%;
+  box-sizing: border-box;
+  outline-width: 0;
+  padding: 1.5% !important;
+  width: 70%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-radius: 5px;
+  font-size: var(--tertirayFont);
+  background-color: var(--secondaryBlack);
+  color: var(--primaryWhite);
+  caret-color: var(--primaryColor);
+}
+.submit {
+  width: 20% !important;
+  padding: 1.5% !important;
+  margin-top: 5%;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.submit:hover {
+  background-color: var(--primaryColor);
+  color: var(--primaryBlack);
+  cursor: pointer;
+  box-shadow: 0.5px 0.5px 10px 1px var(--secondaryBlack);
+}
+.Error {
+  margin-top: 10%;
+  color: var(--primaryRed);
+}

@@ -1,0 +1,37 @@
+.LandingMenuBar {
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 60% 40%;
+  box-sizing: border-box;
+  padding: 20px;
+
+  padding-left: 5%;
+  padding-right: 3%;
+}
+.OptionContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.Option:hover {
+  border-bottom: 2px solid var(--primaryWhite);
+  color: var(--primaryWhite);
+}
+.SignIn {
+  border: 0;
+  background-color: var(--primaryColor);
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: var(--primaryBlack);
+  border-radius: 5px;
+  margin-left: 1%;
+  margin-right: 1%;
+  cursor: pointer;
+}
+.SignIn:hover {
+  border: 0;
+  color: var(--primaryBlack);
+}
