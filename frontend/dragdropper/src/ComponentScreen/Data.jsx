@@ -25,6 +25,11 @@ const getCssProperties = () => {
     borderBottom: { value: "", type: cssDataTypes.string },
     borderBottomColor: { value: "", type: cssDataTypes.color },
     color: { value: "", type: cssDataTypes.color },
+    position: { value: "", type: cssDataTypes.string },
+    top: { value: 0, type: cssDataTypes.length },
+    left: { value: 0, type: cssDataTypes.length },
+    right: { value: 0, type: cssDataTypes.length },
+    fontSize: { value: 0, type: cssDataTypes.length },
   };
 };
 const componentMapping = {

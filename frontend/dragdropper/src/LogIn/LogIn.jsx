@@ -25,41 +25,39 @@ function LogIn({ onLogIn }) {
     updateError(e?.toString() || "");
   };
   return (
-    <div className={styles.LogIn}>
-      <div className={styles.container}>
-        <img className={styles.image} src={LoginImage}></img>
-        <div className={styles.FormContainer}>
-          <h1>Log In</h1>
-          <form onSubmit={onFormSubmit}>
-            <input
-              type="text"
-              className={styles.text}
-              placeholder={"Username"}
-              value={username}
-              onChange={(e) => {
-                e.preventDefault();
-                updateUsername(e.target.value);
-              }}></input>
-            <div>
-              <br></br>
-              <input
-                type="password"
-                className={styles.password}
-                placeholder={"Password"}
-                value={password}
-                onChange={(e) => {
-                  e.preventDefault();
-                  updatePassword(e.target.value);
-                }}></input>
-              <br></br>
-              <input
-                type="submit"
-                value={"Submit"}
-                className={styles.submit}></input>
-              <p className={styles.Error}>{error}</p>
-            </div>
-          </form>
-        </div>
+    <div className={styles.SignUp}>
+      <div className={styles.imageContainer}>
+        <img src={LoginImage} alt={"SignUp Image"}></img>
+      </div>
+      <div className={styles.formContainer}>
+        <form
+          className={styles.form}
+          onSubmit={(e) => {
+            e.preventDefault();
+            onFormSubmit(e);
+          }}>
+          <h1 className={styles.title}>Log In</h1>
+
+          <input
+            type="text"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => {
+              updateUsername(e.target.value);
+            }}
+            className={styles.inputfield}></input>
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => {
+              updatePassword(e.target.value);
+            }}
+            className={styles.inputfield}></input>
+
+          <input type="Submit" value="Submit" className={styles.submit}></input>
+        </form>
+        <p className={styles.Error}>{error}</p>
       </div>
     </div>
   );

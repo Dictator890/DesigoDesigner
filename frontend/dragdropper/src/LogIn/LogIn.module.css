@@ -1,63 +1,167 @@
-.LogIn {
+@keyframes load {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.SignUp {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: 35% 65%;
   box-sizing: border-box;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
+  animation: load 0.8s;
 }
-.container {
+
+.imageContainer {
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
   overflow: hidden;
-  padding: 10px;
+  background-color: var(--primaryColor);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  border-radius: 2px;
 }
-.image {
-  width: 70vmin;
-  margin-left: 2%;
-  margin-bottom: 2%;
+.imageContainer img {
+  width: 80%;
 }
-.FormContainer {
+.formContainer {
+  width: 100%;
+  height: 100%;
+  padding: 2%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  width: 50%;
-  height: fit-content;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
-.FormContainer input {
-  margin-top: 2%;
+
+.title {
+  margin-bottom: 1rem;
+}
+.form {
+  margin: auto;
+  width: 50%;
+  height: fit-content;
+  padding: 2vmin;
+}
+.inputfield {
+  width: 100%;
+  padding: 3%;
   box-sizing: border-box;
+  margin-top: 1vmin;
+  margin-bottom: 1vmin;
+  box-shadow: 0 0 0 0;
   outline-width: 0;
-  padding: 1.5% !important;
-  width: 70%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  border-radius: 5px;
-  font-size: var(--tertirayFont);
   background-color: var(--secondaryBlack);
-  color: var(--primaryWhite);
+  border-radius: 5px;
+  color: #fff;
+  font-size: var(--tertirayFont);
   caret-color: var(--primaryColor);
 }
 .submit {
-  width: 20% !important;
-  padding: 1.5% !important;
-  margin-top: 5%;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  width: 30%;
+  box-sizing: border-box;
+  padding: 3%;
+  border-radius: 5px;
+  transition: background-color 0.4s;
+  box-shadow: 1px 1px 10px 1px #121212;
+  margin-left: 65%;
+  margin-bottom: 1vmin;
+  margin-top: 1vmin;
+  font-size: var(--tertirayFont);
+  background-color: var(--primaryColor);
 }
 .submit:hover {
-  background-color: var(--primaryColor);
-  color: var(--primaryBlack);
   cursor: pointer;
-  box-shadow: 0.5px 0.5px 10px 1px var(--secondaryBlack);
 }
 .Error {
-  margin-top: 10%;
   color: var(--primaryRed);
+  font-size: var(--secondaryFont);
+  margin-top: 5%;
+  text-align: center;
+}
+.uploadPhoto {
+  background-color: var(--secondaryBlack);
+  box-sizing: border-box;
+  padding: 5px;
+  width: 11vmin;
+  height: 11vmin;
+  margin: auto;
+  border-radius: 5px;
+  font-size: var(--miniFont);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  margin-top: 1vmin;
+  margin-bottom: 1vmin;
+}
+.uploadPhoto img {
+  width: 32px;
+  opacity: 0.6;
+}
+@media screen and (max-width: 1025px) {
+  .SignUp {
+    grid-template-columns: 45% 55%;
+  }
+  .form {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .SignUp {
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: none;
+    grid-template-rows: 40% 60%;
+  }
+  .form {
+    width: 70%;
+    margin: 0;
+  }
+  .imageContainer {
+    width: 100vw;
+    height: 100%;
+  }
+  .imageContainer img {
+    width: 60%;
+  }
+  .submit {
+    width: 50%;
+    margin-left: 25%;
+  }
+  .formContainer {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 426px) {
+  .title {
+    display: none;
+  }
+  .uploadPhoto {
+    width: 25vmin;
+    height: 25vmin;
+  }
+  .form {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .submit {
+    margin-top: 5vmin;
+  }
+  .inputfield {
+    margin-top: 2vmin;
+    margin-bottom: 2vmin;
+    padding: 4%;
+  }
 }
