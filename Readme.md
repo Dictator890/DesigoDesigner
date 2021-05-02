@@ -9,3 +9,9 @@ The next target goal for this system is to develop a beautiful UI and UX.
 The project also includes a great care for the security of the users information.
 
 If you do have any problems in  understanding the code you can email me directly.
+# A short peek
+1.See all your designed components in one area
+![allcomponents](https://user-images.githubusercontent.com/45504169/116817564-947a2e00-ab84-11eb-9aa5-e1c8d0cb6d5f.png)
+
+2.This is how your code looks
+![codearea](https://user-images.githubusercontent.com/45504169/116817567-9643f180-ab84-11eb-8f42-2e67d05ac8a3.png)
