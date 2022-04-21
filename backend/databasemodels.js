@@ -35,7 +35,7 @@ const getFormattedComponentStructure = (userid, name, code) => {
   };
 };
 const DatabaseName = "compdesign";
-const DatabaseUrl = "mongodb://localhost:27017/";
+const DatabaseUrl = "mongodb://127.0.0.1:27017/";
 function getUserSchema() {
   return new mongoose.Schema(userStructure);
 }
